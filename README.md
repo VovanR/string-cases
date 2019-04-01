@@ -5,7 +5,7 @@
 
 > Convert variable name to various cases
 
-Demo: [vovanr.github.io/from-date-to-date][demo]
+Demo: [vovanr.github.io/string-cases][demo]
 
 ![](preview.png)
 
@@ -17,10 +17,10 @@ Demo: [vovanr.github.io/from-date-to-date][demo]
 ## License
 MIT © [Vladimir Rodkin](https://github.com/VovanR)
 
-[demo]: https://vovanr.github.io/from-date-to-date
+[demo]: https://vovanr.github.io/string-cases
 
-[depstat-url]: https://david-dm.org/VovanR/from-date-to-date
-[depstat-image]: https://david-dm.org/VovanR/from-date-to-date.svg?style=flat-square
+[depstat-url]: https://david-dm.org/VovanR/string-cases
+[depstat-image]: https://david-dm.org/VovanR/string-cases.svg?style=flat-square
 
-[depstat-dev-url]: https://david-dm.org/VovanR/from-date-to-date
-[depstat-dev-image]: https://david-dm.org/VovanR/from-date-to-date/dev-status.svg?style=flat-square
+[depstat-dev-url]: https://david-dm.org/VovanR/string-cases
+[depstat-dev-image]: https://david-dm.org/VovanR/string-cases/dev-status.svg?style=flat-square
