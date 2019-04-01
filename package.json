@@ -1,0 +1,38 @@
+{
+  "name": "string-cases",
+  "version": "0.0.1",
+  "description": "Convert variable name to various cases",
+  "license": "MIT",
+  "private": true,
+  "repository": "VovanR/string-cases",
+  "author": "Vladimir Rodkin <mail@vovanr.com> (https://github.com/VovanR)",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "xo",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "keywords": [],
+  "dependencies": {
+    "linkstate": "1.1.1",
+    "preact": "8.4.2",
+    "to-case": "2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.0",
+    "@babel/plugin-transform-react-jsx": "7.3.0",
+    "gh-pages": "2.0.1",
+    "parcel-bundler": "1.12.3",
+    "xo": "0.24.0"
+  },
+  "bugs": {
+    "url": "https://github.com/VovanR/string-cases/issues"
+  },
+  "homepage": "https://github.com/VovanR/string-cases#readme",
+  "xo": {
+    "space": true,
+    "envs": [
+      "browser"
+    ]
+  }
+}

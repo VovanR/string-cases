@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--app-font-family);
+  max-width: 1024px;
+}
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 2em;
+  font-size: var(--app-font-size);
+  font-family: var(--app-font-family);
+}
+
+.app__title {
+  margin-top: 0;
+  margin-bottom: 0.67em;
+}
+
+.app__input,
+.app__output {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__input {
+  margin-bottom: 20px;
+}
+
+.app__output {
+  display: grid;
+  row-gap: 3px;
+}
+
+input {
+  color: var(--control-input-color);
+  font-size: inherit;
+  font-family: inherit;
+  min-width: 0;
+  padding: 0.26em 0.6em;
+  box-sizing: content-box;
+  border-width: var(--control-input-border-width);
+  border-style: solid;
+  border-color: var(--control-input-border-color);
+  border-radius: 0;
+  transition: border-color ease 0.15s;
+}
+
+input:focus {
+  border-color: var(--control-input-focus-border-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+input::placeholder {
+  color: var(--control-input-placeholder-color);
+}
