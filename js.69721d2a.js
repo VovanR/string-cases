@@ -39,4 +39,4 @@ var r=require("./cases");function e(e){for(var o in r){if("none"!=o)if((0,r[o])(
 },{"preact":"qWa+","linkstate":"sLcA","to-case":"S0HY","./components/Output/index.jsx":"ytEw"}],"DuCJ":[function(require,module,exports) {
 "use strict";var e=require("preact"),r=u(require("./app.jsx"));function u(e){return e&&e.__esModule?e:{default:e}}(0,e.render)((0,e.h)(r.default,null),document.querySelector("#app-container"));
 },{"preact":"qWa+","./app.jsx":"qiyG"}]},{},["DuCJ"], null)
-//# sourceMappingURL=/js.69721d2a.js.map
+//# sourceMappingURL=js.69721d2a.js.map
