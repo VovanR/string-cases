@@ -3,6 +3,10 @@ import linkState from 'linkstate';
 import to from 'to-case';
 import Output from './components/Output/index.jsx';
 
+function select({target}) {
+  target.select();
+}
+
 export default class App extends Component {
   constructor() {
     super();
@@ -72,6 +76,7 @@ export default class App extends Component {
           <input
             value={value}
             onInput={linkState(this, 'value')}
+            onClick={select}
             autoFocus
           />
         </div>
