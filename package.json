@@ -10,7 +10,7 @@
     "start": "parcel index.html --no-autoinstall",
     "build": "parcel build index.html --public-url ./",
     "test": "xo",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && cp logo.svg ./dist/ && gh-pages -d dist"
   },
   "keywords": [],
   "dependencies": {
