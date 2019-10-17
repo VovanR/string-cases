@@ -1,5 +1,4 @@
 import {h, Component} from 'preact';
-import linkState from 'linkstate';
 import to from 'to-case';
 import Output from './components/Output/index.jsx';
 
@@ -7,12 +6,22 @@ function select({target}) {
   target.select();
 }
 
+function readSearchRequest() {
+  const searchParams = new URLSearchParams(window.location.search);
+  return Array.from(searchParams.keys())[0] || '';
+}
+
+function updateSearchRequest(value) {
+  const url = window.location.pathname + '?' + value;
+  window.history.pushState(null, null, url);
+}
+
 export default class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      value: ''
+      value: readSearchRequest()
     };
 
     this.converters = [
@@ -69,6 +78,16 @@ export default class App extends Component {
         fn: value => to.upper(value)
       }
     ];
+
+    this.updateValue = this.updateValue.bind(this);
+  }
+
+  updateValue({target: {value}}) {
+    updateSearchRequest(value);
+
+    this.setState({
+      value: value,
+    })
   }
 
   render(props, {value}) {
@@ -77,7 +96,7 @@ export default class App extends Component {
         <div className="app__input">
           <input
             value={value}
-            onInput={linkState(this, 'value')}
+            onInput={this.updateValue}
             onClick={select}
             autoFocus
           />
