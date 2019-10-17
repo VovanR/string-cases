@@ -12,6 +12,12 @@ Demo: [vovanr.github.io/string-cases][demo]
 
 ![](preview.png)
 
+## Usage
+
+`https://vovanr.github.io/string-cases/?<string_value>`
+
+Example: [vovanr.github.io/string-cases/?FooBarBaz](https://vovanr.github.io/string-cases/?FooBarBaz)
+
 ## Techs
 
 - [Parcel](https://parceljs.org/)
