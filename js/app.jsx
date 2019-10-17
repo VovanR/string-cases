@@ -11,7 +11,9 @@ export default class App extends Component {
   constructor() {
     super();
 
-    this.state.value = '';
+    this.state = {
+      value: ''
+    };
 
     this.converters = [
       {
