@@ -1115,6 +1115,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/**
+ * @enum {string}
+ */
+var SEARCH_PARAM = {
+  QUERY: 'q'
+};
+
 function select(_ref) {
   var target = _ref.target;
   target.select();
@@ -1122,11 +1131,12 @@ function select(_ref) {
 
 function readSearchRequest() {
   var searchParams = new URLSearchParams(window.location.search);
-  return Array.from(searchParams.keys())[0] || '';
+  return searchParams.get(SEARCH_PARAM.QUERY) || '';
 }
 
 function updateSearchRequest(value) {
-  var url = window.location.pathname + '?' + value;
+  var searchParams = new URLSearchParams(_defineProperty({}, SEARCH_PARAM.QUERY, value));
+  var url = window.location.pathname + '?' + searchParams.toString();
   window.history.pushState(null, null, url);
 }
 
@@ -1216,8 +1226,8 @@ function (_Component) {
 
   _createClass(App, [{
     key: "updateValue",
-    value: function updateValue(_ref2) {
-      var value = _ref2.target.value;
+    value: function updateValue(_ref3) {
+      var value = _ref3.target.value;
       updateSearchRequest(value);
       this.setState({
         value: value
@@ -1225,8 +1235,8 @@ function (_Component) {
     }
   }, {
     key: "render",
-    value: function render(props, _ref3) {
-      var value = _ref3.value;
+    value: function render(props, _ref4) {
+      var value = _ref4.value;
       return (0, _preact.h)("div", null, (0, _preact.h)("div", {
         className: "app__input"
       }, (0, _preact.h)("input", {
@@ -1236,9 +1246,9 @@ function (_Component) {
         autoFocus: true
       })), (0, _preact.h)("div", {
         className: "app__output"
-      }, this.converters.map(function (_ref4) {
-        var name = _ref4.name,
-            fn = _ref4.fn;
+      }, this.converters.map(function (_ref5) {
+        var name = _ref5.name,
+            fn = _ref5.fn;
         return (0, _preact.h)(_index.default, {
           key: name,
           value: fn(value),
@@ -1290,7 +1300,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34753" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33687" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
