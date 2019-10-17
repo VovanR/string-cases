@@ -14,9 +14,9 @@ Demo: [vovanr.github.io/string-cases][demo]
 
 ## Usage
 
-`https://vovanr.github.io/string-cases/?<string_value>`
+`https://vovanr.github.io/string-cases/?q=<string_value>`
 
-Example: [vovanr.github.io/string-cases/?FooBarBaz](https://vovanr.github.io/string-cases/?FooBarBaz)
+Example: [vovanr.github.io/string-cases/?q=FooBarBaz](https://vovanr.github.io/string-cases/?q=FooBarBaz)
 
 ## Techs
 

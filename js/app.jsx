@@ -2,17 +2,25 @@ import {h, Component} from 'preact';
 import to from 'to-case';
 import Output from './components/Output/index.jsx';
 
+/**
+ * @enum {string}
+ */
+const SEARCH_PARAM = {
+  QUERY: 'q'
+};
+
 function select({target}) {
   target.select();
 }
 
 function readSearchRequest() {
   const searchParams = new URLSearchParams(window.location.search);
-  return Array.from(searchParams.keys())[0] || '';
+  return searchParams.get(SEARCH_PARAM.QUERY) || '';
 }
 
 function updateSearchRequest(value) {
-  const url = window.location.pathname + '?' + value;
+  const searchParams = new URLSearchParams({[SEARCH_PARAM.QUERY]: value});
+  const url = window.location.pathname + '?' + searchParams.toString();
   window.history.pushState(null, null, url);
 }
 
