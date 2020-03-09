@@ -94,8 +94,8 @@ export default class App extends Component {
     updateSearchRequest(value);
 
     this.setState({
-      value: value,
-    })
+      value,
+    });
   }
 
   render(props, {value}) {
