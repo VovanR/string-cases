@@ -14,13 +14,13 @@ function select({target}) {
 }
 
 function readSearchRequest() {
-  const searchParams = new URLSearchParams(window.location.search);
-  return searchParams.get(SEARCH_PARAM.QUERY) || '';
+  const searchParameters = new URLSearchParams(window.location.search);
+  return searchParameters.get(SEARCH_PARAM.QUERY) || '';
 }
 
 function updateSearchRequest(value) {
-  const searchParams = new URLSearchParams({[SEARCH_PARAM.QUERY]: value});
-  const url = window.location.pathname + '?' + searchParams.toString();
+  const searchParameters = new URLSearchParams({[SEARCH_PARAM.QUERY]: value});
+  const url = window.location.pathname + '?' + searchParameters.toString();
   window.history.pushState(null, null, url);
 }
 
@@ -87,10 +87,10 @@ export default class App extends Component {
       }
     ];
 
-    this.updateValue = this.updateValue.bind(this);
+    this.handleValueUpdate = this.handleValueUpdate.bind(this);
   }
 
-  updateValue({target: {value}}) {
+  handleValueUpdate({target: {value}}) {
     updateSearchRequest(value);
 
     this.setState({
@@ -104,7 +104,7 @@ export default class App extends Component {
         <div className="app__input">
           <input
             value={value}
-            onInput={this.updateValue}
+            onInput={this.handleValueUpdate}
             onClick={select}
             autoFocus
           />
