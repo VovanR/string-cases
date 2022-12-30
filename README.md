@@ -3,9 +3,6 @@
 <img align="right" width="120" height="120"
      src="./logo.svg" alt="String Cases logo">
 
-[![Dependency Status][depstat-image]][depstat-url]
-[![DevDependency Status][depstat-dev-image]][depstat-dev-url]
-
 > Convert variable name to various cases
 
 Demo: [vovanr.github.io/string-cases][demo]
@@ -27,9 +24,3 @@ Example: [vovanr.github.io/string-cases/?q=FooBarBaz](https://vovanr.github.io/s
 MIT © [Vladimir Rodkin](https://github.com/VovanR)
 
 [demo]: https://vovanr.github.io/string-cases
-
-[depstat-url]: https://david-dm.org/VovanR/string-cases
-[depstat-image]: https://david-dm.org/VovanR/string-cases.svg?style=flat-square
-
-[depstat-dev-url]: https://david-dm.org/VovanR/string-cases
-[depstat-dev-image]: https://david-dm.org/VovanR/string-cases/dev-status.svg?style=flat-square
